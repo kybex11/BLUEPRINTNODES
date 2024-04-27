@@ -48,6 +48,17 @@ export function createPlate(width, height) {
     container.style.left = (e.clientX + 10) + "px";
     container.style.top = (e.clientY + 10) + "px";
     container.style.pointerEvents = "none";
+
+
+    const addButton = document.createElement("button");
+    addButton.textContent = "Add";
+    addButton.style.fontSize = "16px";
+    addButton.style.border = "none";
+    addButton.style.background = "none";
+    addButton.style.fontFamily = "Arial, sans-serif";
+    addButton.style.cursor = "pointer";
+
+    container.appendChild(addButton);
     document.body.appendChild(container);
 
     const rm = () => {
@@ -78,7 +89,7 @@ export function createPlate(width, height) {
   }
 
   const label = document.createElement("div");
-  label.textContent = "Blueprint";
+  label.textContent = "beta Blueprint";
   label.style.position = "absolute";
   label.style.bottom = "30px";
   label.style.right = "30px";
