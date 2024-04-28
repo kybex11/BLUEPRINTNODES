@@ -1,7 +1,6 @@
-export function createPlate(width, height) {
+export function createPlate(width, height, cellSize) {
   console.log("BlueprintNodes INFO: Creating Plate");
 
-  const cellSize = 70;
   let cols = Math.floor(width / cellSize);
   let rows = Math.floor(height / cellSize);
 
@@ -28,7 +27,6 @@ export function createPlate(width, height) {
     console.log("BlueprintNodes INFO: Plate Size Updated");
   }
 
-
   window.addEventListener('load', updatePlateSize);
 
   let container = null;
@@ -48,7 +46,6 @@ export function createPlate(width, height) {
     container.style.left = (e.clientX + 10) + "px";
     container.style.top = (e.clientY + 10) + "px";
     container.style.pointerEvents = "none";
-
 
     const addButton = document.createElement("button");
     addButton.textContent = "Add";

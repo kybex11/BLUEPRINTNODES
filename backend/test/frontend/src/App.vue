@@ -11,7 +11,7 @@ export default {
   mounted() {
     const plateContainer = this.$refs.plateContainer;
 
-    const plate = createPlate(window.innerWidth, window.innerHeight);
+    const plate = createPlate(window.innerWidth, window.innerHeight, 70);
 
     plateContainer.appendChild(plate);
   }
